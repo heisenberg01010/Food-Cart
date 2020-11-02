@@ -30,21 +30,21 @@ public class CatalogActivity extends AppCompatActivity {
         //Create dataset
         List<Product> products = new ArrayList<>(
                 Arrays.asList(
-                        new Product("Apple", 20),
-                        new Product("Banana", 30),
-                        new Product("Apricots", 40),
-                        new Product("Avocado", 50),
-                        new Product("Blackberries", 60),
-                        new Product("Apple", 20),
-                        new Product("Banana", 30),
-                        new Product("Apricots", 40),
-                        new Product("Avocado", 50),
-                        new Product("Blackberries", 60),
-                        new Product("Apple", 20),
-                        new Product("Banana", 30),
-                        new Product("Apricots", 40),
-                        new Product("Avocado", 50),
-                        new Product("Blackberries", 60)
+                        new Product("Tomato", 20),
+                        new Product("Orange", 30),
+                        new Product("Kiwi", 40),
+                        new Product("Papaya", 50),
+                        new Product("Grapes", 60),
+                        new Product("Cucumber", 20),
+                        new Product("Coriander", 30),
+                        new Product("Spinach", 40),
+                        new Product("Carrots", 50),
+                        new Product("Mango", 60),
+                        new Product("Gooseberries", 20),
+                        new Product("Potato", 30),
+                        new Product("Onion", 40),
+                        new Product("Capsicum", 50),
+                        new Product("Jack Fruit", 60)
                 )
         );
 

@@ -13,6 +13,7 @@ import com.example.livecoding.models.Product;
 
 import java.util.List;
 
+
 //Adapter for list of products
 public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHolder> {
 
@@ -50,7 +51,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
         Product product = productList.get(position);
 
         //Bind the data
-        holder.b.name.setText(String.format("%s Rs. %d", product.name, product.price));
+        holder.b.name.setText(String.format("%s \u20B9 %d", product.name, product.price));
 
         //Quantity
         holder.b.qty.setText(product.qty + "");
@@ -63,11 +64,13 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
         //Configure + btn
 
         holder.b.incrementBtn.setOnClickListener(new View.OnClickListener() {
+            //private final int OLD_PRICE = product.price;
+
             @Override
             public void onClick(View v) {
-                //final int OLD_PRICE = product.price;
                 product.qty++;
                 //product.price += OLD_PRICE;
+                product.price = product.OLD_PRICE * product.qty;
                 notifyItemChanged(position);
 
             }
@@ -76,6 +79,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 product.qty--;
+                if(product.price != product.OLD_PRICE) product.price -= product.OLD_PRICE;
                 notifyItemChanged(position);
 
             }
